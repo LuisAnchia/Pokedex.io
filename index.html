@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pokedex</h1>
+    <form id="add-pokemon-form">
+      <input type="text" id="name" placeholder="Nombre" required>
+      <input type="text" id="type" placeholder="Tipo" required>
+      <textarea id="description" placeholder="Descripción" required></textarea>
+      <input type="checkbox" id="evolution" value="true">
+      <label for="evolution">Tiene Evolución</label>
+      <input type="text" id="weaknesses" placeholder="Debilidades" required>
+      <button type="submit">Agregar Pokémon</button>
+    </form>
+    <input type="text" id="search" placeholder="Buscar por nombre o tipo">
+    <div id="pokemon-list">
+      <!-- La lista de pokémons se generará aquí -->
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
