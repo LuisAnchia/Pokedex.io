@@ -17,7 +17,7 @@ app.post('/pokemon', (req, res) => {
   res.status(201).json(newPokemon);
 });
 
-// Visualización de pokémons
+// Visualización de todos los pokémons
 app.get('/pokemon', (req, res) => {
   res.json(pokemons);
 });
