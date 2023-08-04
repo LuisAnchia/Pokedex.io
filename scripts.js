@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search');
   const pokemonList = document.getElementById('pokemon-list');
   const searchResults = document.getElementById('search-results');
+  const { MongoClient, ObjectId } = require('mongodb');
+
+  const uri = 'mongodb+srv://anchiaprogram1:hw85jSFpdTgDPW1J@cluster0.tdratzf.mongodb.net/?retryWrites=true&w=majority';
+  const client = new MongoClient(uri);
+  let cardsCollection;
 
   // Función para mostrar la lista de pokémons
   function displayPokemons(pokemons) {
