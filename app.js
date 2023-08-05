@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const { MongoClient, ObjectId } = require('mongodb');
+
+const uri = 'mongodb+srv://anchiaprogram1:hw85jSFpdTgDPW1J@cluster0.tdratzf.mongodb.net/?retryWrites=true&w=majority';
+const client = new MongoClient(uri);
+let cardsCollection;
+
 
 // Configuración para procesar JSON en las solicitudes
 app.use(express.json());
