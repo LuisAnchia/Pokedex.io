@@ -99,3 +99,17 @@ app.delete('/api/pokemons/:id', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+(async () => {
+  try {
+    await client.connect();
+    console.log('Conexión a MongoDB Atlas establecida');
+    const db = client.db('mydatabase'); 
+    cardsCollection = db.collection('cards'); 
+    app.listen(port, () => {
+      console.log(`Servidor escuchando en http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.error('Error al conectar con MongoDB Atlas', error);
+  }
+})();
